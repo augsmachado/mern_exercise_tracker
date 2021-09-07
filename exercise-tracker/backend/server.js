@@ -16,11 +16,20 @@ const uri = process.env.ATLAS_URI;
 mongoose.connect(uri);
 const connection = mongoose.connection;
 
+// Status error MongoDB connection
 connection.on("error", console.error.bind(console, "connection error:"));
 
+// Status successfully MongoDB connection
 connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
+
+// CRUD routes
+const exercisesRouter = require("./routes/exercises");
+const usersRouter = require("./routes/users");
+
+app.use("/exercises", exercisesRouter);
+app.use("/users", usersRouter);
 
 // Status of the server connection
 app.listen(port, () => {
