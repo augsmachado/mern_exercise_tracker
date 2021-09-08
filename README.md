@@ -3,5 +3,7 @@ Learn the MERN stack by building an exercise tracker application in this complet
 Tutorial developed by Beau Carnes.
 
 💻 Code: https://github.com/beaucarnes/mern-ex...
+
 🔗 MongoDB Atlas: https://www.mongodb.com/cloud/atlas?u...
+
 🔗 Article version: https://medium.com/@beaucarnes/learn-..
